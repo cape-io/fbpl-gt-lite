@@ -1,0 +1,173 @@
+/* -----------------------------------------------------*/
+/* --------------->>> variables.less <<<----------------*/
+/* -----------------------------------------------------*/
+
+/* 1. @Font-Face — load my google fonts... */
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800");
+@import url("http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic");
+
+/* 2. Load league gothic from my font server... */
+
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url('http://fonts.ookb.co/ff/leaguegothic-regular-webfont.eot');
+  src:  local('League Gothic'),
+        local('LeagueGothic-Regular'),
+        url('http://fonts.ookb.co/ff/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://fonts.ookb.co/ff/leaguegothic-regular-webfont.woff') format('woff'),
+        url('http://fonts.ookb.co/ff/leaguegothic-regular-webfont.ttf') format('truetype'),
+        url('http://fonts.ookb.co/ff/leaguegothic-regular-webfont.svg#league_gothic_italicregular') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url('http://fonts.ookb.co/ff/leaguegothic-italic-webfont.eot');
+  src:  local('League Gothic Italic'),
+        local('LeagueGothic-Italic'),
+        url('http://fonts.ookb.co/ff/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://fonts.ookb.co/ff/leaguegothic-italic-webfont.woff') format('woff'),
+        url('http://fonts.ookb.co/ff/leaguegothic-italic-webfont.ttf') format('truetype'),
+        url('http://fonts.ookb.co/ff/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* declare some basic font-families */
+@open-sans-stack: 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
+@gentium-stack: 'Gentium Book Basic', Cambria, Georgia, Times, serif;
+@league-gothic-stack: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
+
+.league-gothic {
+  font-family: @league-gothic-stack;
+  font-weight: normal; /* there aren't different weights, so this is important */
+}
+
+/** other general reusable classes/hacks **/
+.hide-text {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.show-text {
+  text-indent: 0%;
+  white-space: normal;
+  overflow: visible;
+}
+
+.add-top(@margin) {
+  margin-top: @margin;
+}
+
+.add-bottom(@margin) {
+  margin-bottom: @margin;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.transition-all(@timing) {
+  -webkit-transition: all @timing;
+  -moz-transition: all @timing;
+  -ms-transition: all @timing;
+  -o-transition: all @timing;
+  transition: all @timing;
+}
+
+/* floats and clears */
+.left,
+.floatleft,
+.float-left,
+.leftfloat,
+.left-float {
+  float: left;
+}
+
+.right,
+.floatright,
+.float-right,
+.rightfloat,
+.right-float {
+  float: right;
+}
+
+.clear,
+.clearboth,
+.clear-both,
+.both-clear,
+.bothclear {
+  clear: both;
+}
+.clearleft,
+.leftclear,
+.clear-left,
+.left-clear {
+  clear: left;
+}
+.clearright,
+.rightclear,
+.clear-right,
+.right-clear {
+  clear: right;
+}
+
+.clearfix,
+.clear-fix,
+.cf,
+.group {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* 
+  center, left and right align text.
+  it is my personal opinion that you should never use "text-align: justify;" on the web.
+  browsers aren't good enough at typesetting justified text.
+  I have not created those styles for that reason.
+*/
+
+.text-center,
+.textcenter,
+.center-text,
+.centertext,
+.align-center,
+.center-align,
+.aligncenter,
+.centeralign {
+  text-align: center;
+}
+
+.text-right,
+.right-text,
+.textright,
+.righttext,
+.align-right,
+.right-align,
+.alignright,
+.rightalign {
+  text-align: right;
+}
+
+.text-left,
+.left-text,
+.textleft,
+.lefttext,
+.align-left,
+.left-align,
+.alignleft,
+.leftalign {
+  text-align: left;
+}
+
+/* -----------------------------------------------------*/
+/* ------------->>> /end variables.less <<<-------------*/
+/* -----------------------------------------------------*/
